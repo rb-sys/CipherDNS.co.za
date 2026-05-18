@@ -1,0 +1,32 @@
+name: 🔓 Report Broken Domain / False Positive
+description: Report a legitimate domain or application that is being incorrectly blocked by our filters.
+title: "[False Positive]: "
+labels: ["false-positive", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Thanks for reporting a false positive!
+        Please fill out the details below so we can investigate the blocklist hit and whitelist the domain if verified.
+  - type: input
+    id: blocked-domain
+    attributes:
+      label: What domain is being blocked?
+      placeholder: e.g., legitimate-sa-site.co.za
+    validations:
+      required: true
+  - type: checkboxes
+    id: protocols-affected
+    attributes:
+      label: Which protocols have you noticed the block on?
+      options:
+        - label: DNS-over-HTTPS (DoH)
+        - label: DNS-over-TLS (DoT)
+        - label: DNS-over-QUIC (DoQ)
+  - type: textarea
+    id: symptoms
+    attributes:
+      label: What happens when you try to access it?
+      placeholder: e.g., Browser displays NXDOMAIN or connection timeout error.
+    validations:
+      required: true
