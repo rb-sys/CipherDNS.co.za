@@ -1,5 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Infrastructure Status Dashboard
-    url: https://status.vpsdns.co.za
-    about: Check real-time operational status and latency historical charts.
+  - name: Main Project Website
+    url: https://vpsdns.co.za
+    about: Visit our home page for onboarding guides, performance updates, and project metrics.
+  - name: Infrastructure Support Email
+    url: mailto:cloudvm@vxpress.co.za
+    about: Reach out directly via email for inquiries, issues, or administrative contact.
