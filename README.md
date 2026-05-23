@@ -17,7 +17,7 @@ Captured via steady-state `dnspyre` regression testing (20 QPS across 4 concurre
 ## 🔒 Security & Privacy Policy
 * **Zero Logging:** Client source IP addresses are processed entirely in-memory and are never written to persistent disks or database logs.
 * **DNSSEC Validation:** Full cryptographic verification of upstream root zones to prevent DNS cache poisoning and man-in-the-middle hijacking.
-* **Threat Intelligence Filtering:** Integrated blocklists updated every 24 hours to automatically drop malicious botnets, phishing links, and malware delivery vectors at the edge.
+* **Unfiltered & Natural:** We do not implement content filtering, blocklists, or resolution modifications. You receive raw DNS responses.
 
 ## ⚙️ Connection Endpoints & DNS Stamps
 
