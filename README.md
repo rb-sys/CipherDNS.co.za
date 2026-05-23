@@ -31,4 +31,4 @@ Captured via steady-state `dnspyre` regression testing (20 QPS across 4 concurre
 
 ### 3. DNS-over-HTTPS (DoH)
 * **Address:** `https://doh.vpsdns.co.za/dns-query`
-* **Stamp:** `sdns://AgcAAAAAAAAADTEwMi4yMTQuMTAuODIAEGRvaC52cHNkbnMuY28uemEKL2Rucy1xdWVyeQ`
+* **Stamp:** `sdns://AgcAAAAAAAAADTEwMi4yMTQuMTAuODIgsz-TIivw3iPvQ_LMMbM65bYyD8n6RJZogCA-bZ1aKLMQZG9oLnZwc2Rucy5jby56YQovZG5zLXF1ZXJ5`
