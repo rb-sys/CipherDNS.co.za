@@ -10,9 +10,11 @@ Our dual-edge infrastructure pairs high-efficiency Nginx reverse-proxying for TC
 ## ⚡ Real-World Performance Metrics
 Captured via steady-state `dnspyre` regression testing (20 QPS across 4 concurrent threads hitting South African routing paths):
 
-* **DNS-over-QUIC (DoQ):** ~30.36 ms mean latency | 39.85 ms $p99$ tail execution constraint.
-* **DNS-over-TLS (DoT):** ~31.18 ms mean latency | 52.43 ms $p99$ tail execution constraint.
-* **DNS-over-HTTPS (DoH):** ~37.90 ms mean latency (Edge-accelerated via Cloudflare).
+* **DNS-over-QUIC (DoQ):** ~30.02 ms mean latency | 46.14 ms $p99$ tail execution constraint.
+* **DNS-over-TLS (DoT):** ~29.08 ms mean latency | 54.53 ms $p99$ tail execution constraint.
+* **DNS-over-HTTPS (DoH):** ~31.56 ms mean latency | 37.75ms $p99$ tail execution constraint.
+
+* **Resolver Network & Latency Context:** Latency metrics are typically captured via a persistent testing client located in George, WC routing directly to the central resolver in Johannesburg, GP (approx. 1,150 km fiber path distance). Under typical network environments, latency is primarily limited by physical fiber distance (approx. 1ms RTT per 100km of transit). If you are accessing this resolver from within Gauteng or the surrounding regions, your real-world status timings are designed to scale down significantly—typically yielding sub-5ms resolution speeds under normal routing conditions depending on upstream ISP routing.
 
 ## 🔒 Security & Privacy Policy
 * **Zero Logging:** Client source IP addresses are processed entirely in-memory and are never written to persistent disks or database logs.
