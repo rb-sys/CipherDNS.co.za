@@ -1,4 +1,7 @@
-# VPSDNS.co.za
+## Domain will be transitioned from vpsdns.co.za to cipherdns.co.za. Important: Services will be interrupted during the migration to CipherDNS; Transition scheduled for completion by 31/05/26.
+
+
+# VPSDNS.co.za ( soon CipherDNS.co.za )
 A self-managed DNS resolver publically available for use based in South Africa.
 
 # Public Hyperlocal Secure DNS Resolver (South Africa)
