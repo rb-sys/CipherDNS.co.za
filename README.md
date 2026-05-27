@@ -24,7 +24,7 @@ Captured via steady-state `dnspyre` regression testing (20 QPS across 4 concurre
 * **DNSSEC Validation:** Full cryptographic verification of upstream root zones to prevent DNS cache poisoning and man-in-the-middle hijacking.
 * **Unfiltered & Natural:** We do not implement content filtering, blocklists, or resolution modifications. You receive raw DNS responses.
 
-## ⚙️ Connection Endpoints & DNS Stamps
+## ⚙️ Connection Endpoints & DNS Stamps ( Johannesburg-01 )
 
 ### 1. DNS-over-QUIC (DoQ)
 * **Address:** `***`
@@ -35,12 +35,12 @@ Captured via steady-state `dnspyre` regression testing (20 QPS across 4 concurre
 * **Stamp:** `***`
 
 ### 3. DNS-over-HTTPS (DoH)
-* **Address:** `***`
-* **Stamp:** `***`
+* **Address:** `https://jb1-doh.cipherdns.co.za/dns-query`
+* **Stamp:** `sdns://AgcAAAAAAAAAETEwMi4yMTQuMTAuODI6NDQzIOqZ_CHx5qkQnPKeJ6CeLnsGIXkvpnnuhnILI-WmYCw3F2piMS1kb2guY2lwaGVyZG5zLmNvLnphCi9kbnMtcXVlcnk`
 
 ### 4. DNSCrypt
-* **Address:** `***`
-* **Stamp:** `***`
+* **Provider:** `2.dnscrypt-cert.jb1.cipherdns.co.za`
+* **Stamp:** `sdns://AQcAAAAAAAAAEjEwMi4yMTQuMTAuODI6ODQ0MyAp_ZK8Ab77yIXFI7AIeSrgjZjUJ2zG9acKC0XARJZprSMyLmRuc2NyeXB0LWNlcnQuamIxLmNpcGhlcmRucy5jby56YQ`
 
 ### 5. Anonymized DNS (Relay)
-* **Stamp:** `***`
+* **Stamp:** `sdns://gRIxMDIuMjE0LjEwLjgyOjg0NDM`
