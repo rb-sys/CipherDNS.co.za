@@ -27,20 +27,20 @@ Captured via steady-state `dnspyre` regression testing (20 QPS across 4 concurre
 ## ⚙️ Connection Endpoints & DNS Stamps
 
 ### 1. DNS-over-QUIC (DoQ)
-* **Address:** `quic://doq.vpsdns.co.za:853`
-* **Stamp:** `sdns://BAcAAAAAAAAAETEwMi4yMTQuMTAuODI6ODUzIObxHsgGwcfmTCgwrLr0momTVQu6RFr1ZfshJ3FvHSJIEGRvcS52cHNkbnMuY28uemE`
+* **Address:** `***`
+* **Stamp:** `***`
 
 ### 2. DNS-over-TLS (DoT)
-* **Address:** `dot.vpsdns.co.za:853`
-* **Stamp:** `sdns://AwcAAAAAAAAAETEwMi4yMTQuMTAuODI6ODUzIObxHsgGwcfmTCgwrLr0momTVQu6RFr1ZfshJ3FvHSJIEGRvdC52cHNkbnMuY28uemE`
+* **Address:** `***`
+* **Stamp:** `***`
 
 ### 3. DNS-over-HTTPS (DoH)
-* **Address:** `https://doh.vpsdns.co.za/dns-query`
-* **Stamp:** `sdns://AgcAAAAAAAAAETEwMi4yMTQuMTAuODI6NDQzIObxHsgGwcfmTCgwrLr0momTVQu6RFr1ZfshJ3FvHSJIEGRvaC52cHNkbnMuY28uemEKL2Rucy1xdWVyeQ`
+* **Address:** `***`
+* **Stamp:** `***`
 
 ### 4. DNSCrypt
-* **Address:** `102.214.10.82:8443`
-* **Stamp:** `sdns://AQcAAAAAAAAAEjEwMi4yMTQuMTAuODI6ODQ0MyAp_ZK8Ab77yIXFI7AIeSrgjZjUJ2zG9acKC0XARJZprRwyLmRuc2NyeXB0LWNlcnQudnBzZG5zLmNvLnph`
+* **Address:** `***`
+* **Stamp:** `***`
 
 ### 5. Anonymized DNS (Relay)
-* **Stamp:** `sdns://gRIxMDIuMjE0LjEwLjgyOjg0NDM`
+* **Stamp:** `***`
