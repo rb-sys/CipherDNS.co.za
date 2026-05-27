@@ -27,12 +27,12 @@ Captured via steady-state `dnspyre` regression testing (20 QPS across 4 concurre
 ## ⚙️ Connection Endpoints & DNS Stamps ( Johannesburg-01 )
 
 ### 1. DNS-over-QUIC (DoQ)
-* **Address:** `***`
-* **Stamp:** `***`
+* **Address:** `quic://jb1-doq.cipherdns.co.za`
+* **Stamp:** `sdns://BAcAAAAAAAAAETEwMi4yMTQuMTAuODI6ODUzIOqZ_CHx5qkQnPKeJ6CeLnsGIXkvpnnuhnILI-WmYCw3F2piMS1kb3EuY2lwaGVyZG5zLmNvLnph`
 
 ### 2. DNS-over-TLS (DoT)
-* **Address:** `***`
-* **Stamp:** `***`
+* **Address:** `jb1-dot.cipherdns.co.za:853`
+* **Stamp:** `sdns://AwcAAAAAAAAAETEwMi4yMTQuMTAuODI6ODUzIOqZ_CHx5qkQnPKeJ6CeLnsGIXkvpnnuhnILI-WmYCw3F2piMS1kb3QuY2lwaGVyZG5zLmNvLnph`
 
 ### 3. DNS-over-HTTPS (DoH)
 * **Address:** `https://jb1-doh.cipherdns.co.za/dns-query`
