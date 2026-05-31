@@ -1,14 +1,11 @@
-## Domain will be transitioned from vpsdns.co.za to cipherdns.co.za. Important: Services will be interrupted during the migration to CipherDNS; Transition scheduled for completion by 31/05/26.
-
-
-# VPSDNS.co.za ( soon CipherDNS.co.za )
+# CipherDNS.co.za
 A self-managed DNS resolver publically available for use based in South Africa.
 
 # Public Hyperlocal Secure DNS Resolver (South Africa)
 
 A high-performance, privacy-focused public DNS resolver architecture designed for low-latency, cryptographically secure name resolution within South Africa. 
 
-Our dual-edge infrastructure pairs high-efficiency Nginx reverse-proxying for TCP-based layers with direct user-space UDP worker binding for next-generation QUIC handling, upstreamed to a hardened Technitium DNS core.
+Our dual-edge infrastructure pairs high-efficiency Nginx reverse-proxying for TCP-based layers with direct user-space UDP worker binding for next-generation QUIC handling, upstreamed to a hardened Unbound DNS core.
 
 ## ⚡ Real-World Performance Metrics
 Captured via steady-state `dnspyre` regression testing (20 QPS across 4 concurrent threads hitting South African routing paths):
@@ -26,21 +23,17 @@ Captured via steady-state `dnspyre` regression testing (20 QPS across 4 concurre
 
 ## ⚙️ Connection Endpoints & DNS Stamps ( Johannesburg-01 )
 
-### 1. DNS-over-QUIC (DoQ)
-* **Address:** `quic://jb1-doq.cipherdns.co.za`
-* **Stamp:** `sdns://BAcAAAAAAAAAETEwMi4yMTQuMTAuODI6ODUzIOqZ_CHx5qkQnPKeJ6CeLnsGIXkvpnnuhnILI-WmYCw3F2piMS1kb3EuY2lwaGVyZG5zLmNvLnph`
-
-### 2. DNS-over-TLS (DoT)
+### 1. DNS-over-TLS (DoT)
 * **Address:** `jb1-dot.cipherdns.co.za:853`
 * **Stamp:** `sdns://AwcAAAAAAAAAETEwMi4yMTQuMTAuODI6ODUzIOqZ_CHx5qkQnPKeJ6CeLnsGIXkvpnnuhnILI-WmYCw3F2piMS1kb3QuY2lwaGVyZG5zLmNvLnph`
 
-### 3. DNS-over-HTTPS (DoH)
+### 2. DNS-over-HTTPS (DoH)
 * **Address:** `https://jb1-doh.cipherdns.co.za/dns-query`
 * **Stamp:** `sdns://AgcAAAAAAAAAETEwMi4yMTQuMTAuODI6NDQzIOqZ_CHx5qkQnPKeJ6CeLnsGIXkvpnnuhnILI-WmYCw3F2piMS1kb2guY2lwaGVyZG5zLmNvLnphCi9kbnMtcXVlcnk`
 
-### 4. DNSCrypt
+### 3. DNSCrypt
 * **Provider:** `2.dnscrypt-cert.jb1.cipherdns.co.za`
 * **Stamp:** `sdns://AQcAAAAAAAAAEjEwMi4yMTQuMTAuODI6ODQ0MyAp_ZK8Ab77yIXFI7AIeSrgjZjUJ2zG9acKC0XARJZprSMyLmRuc2NyeXB0LWNlcnQuamIxLmNpcGhlcmRucy5jby56YQ`
 
-### 5. Anonymized DNS (Relay)
+### 4. Anonymized DNS (Relay)
 * **Stamp:** `sdns://gRIxMDIuMjE0LjEwLjgyOjg0NDM`
