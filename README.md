@@ -16,7 +16,7 @@ Our dual-edge infrastructure pairs high-efficiency Nginx reverse-proxying for TC
 ## ⚙️ Connection Endpoints & DNS Stamps ( Johannesburg-01 )
 
 ### 1. DNS-over-TLS (DoT)
-* **Address:** `tls://jb1-dot.cipherdns.co.za`
+* **Address:** `tls://jb1-dot.cipherdns.co.za:853`
 * **Stamp:** '' 
 
 ### 2. DNS-over-HTTPS (DoH)
@@ -24,7 +24,7 @@ Our dual-edge infrastructure pairs high-efficiency Nginx reverse-proxying for TC
 * **Stamp:** `sdns://AgcAAAAAAAAADTEwMi4yMTQuMTAuODIgsl8vNpZ_c5TwmTeIWzM_qjVtcZ_qzzjM6fA1UADz4XQXamIxLWRvaC5jaXBoZXJkbnMuY28uemEKL2Rucy1xdWVyeQ`
 
 ### 3. DNS-over-QUIC (DoQ)
-* **Address:** `quic://jb1-doq.cipherdns.co.za`
+* **Address:** `quic://jb1-doq.cipherdns.co.za:784`
 
 ### 4. DNSCrypt
 * **Provider:** `2.dnscrypt-cert.jb1.cipherdns.co.za`
@@ -36,14 +36,14 @@ Our dual-edge infrastructure pairs high-efficiency Nginx reverse-proxying for TC
 ## ⚙️ Connection Endpoints & DNS Stamps ( CapeTown-01 )
 
 ### 1. DNS-over-TLS (DoT)
-* **Address:** `tls://ct1-doh.cipherdns.co.za`
+* **Address:** `tls://ct1-doh.cipherdns.co.za:853`
 
 ### 2. DNS-over-HTTPS (DoH)
 * **Address:** `https://ct1-doh.cipherdns.co.za/dns-query`
 * **Stamp:** `sdns://AgcAAAAAAAAADjEwMi4yMDkuMjEuMTc2IN9Gmj6Z-sGI6kgHGCuJ-2IbQ7MV1jsrEVngkymImwm7F2N0MS1kb2guY2lwaGVyZG5zLmNvLnphCi9kbnMtcXVlcnk`
 
 ### 3. DNS-over-QUIC (DoQ)
-* **Address:** `quic://ct1-doq.cipherdns.co.za`
+* **Address:** `quic://ct1-doq.cipherdns.co.za:784`
 
 ### 4. DNSCrypt
 * **Provider:** `2.dnscrypt-cert.ct1.cipherdns.co.za`
