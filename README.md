@@ -7,16 +7,8 @@ A high-performance, privacy-focused public DNS resolver architecture designed fo
 
 Our dual-edge infrastructure pairs high-efficiency Nginx reverse-proxying for TCP-based layers with direct user-space UDP worker binding for next-generation QUIC handling, upstreamed to a hardened Unbound DNS core.
 
-## ⚡ Real-World Performance Metrics
-Captured via steady-state `dnspyre` regression testing (20 QPS across 4 concurrent threads hitting South African routing paths):
-
-* **DNS-over-QUIC (DoQ):** ~30.02 ms mean latency | 46.14 ms $p99$ tail execution constraint.
-* **DNS-over-TLS (DoT):** ~29.08 ms mean latency | 54.53 ms $p99$ tail execution constraint.
-* **DNS-over-HTTPS (DoH):** ~31.56 ms mean latency | 37.75ms $p99$ tail execution constraint.
-
-* **Resolver Network & Latency Context:** Latency metrics are typically captured via a persistent testing client located in George, WC routing directly to the central resolver in Johannesburg, GP (approx. 1,150 km fiber path distance). Under typical network environments, latency is primarily limited by physical fiber distance (approx. 1ms RTT per 100km of transit). If you are accessing this resolver from within Gauteng or the surrounding regions, your real-world status timings are designed to scale down significantly—typically yielding sub-5ms resolution speeds under normal routing conditions depending on upstream ISP routing.
-
 ## 🔒 Security & Privacy Policy
+
 * **Zero Logging:** Client source IP addresses are processed entirely in-memory and are never written to persistent disks or database logs.
 * **DNSSEC Validation:** Full cryptographic verification of upstream root zones to prevent DNS cache poisoning and man-in-the-middle hijacking.
 * **Unfiltered & Natural:** We do not implement content filtering, blocklists, or resolution modifications. You receive raw DNS responses.
@@ -24,16 +16,37 @@ Captured via steady-state `dnspyre` regression testing (20 QPS across 4 concurre
 ## ⚙️ Connection Endpoints & DNS Stamps ( Johannesburg-01 )
 
 ### 1. DNS-over-TLS (DoT)
-* **Address:** `jb1-dot.cipherdns.co.za:853`
-* **Stamp:** `sdns://AwcAAAAAAAAAETEwMi4yMTQuMTAuODI6ODUzIOqZ_CHx5qkQnPKeJ6CeLnsGIXkvpnnuhnILI-WmYCw3F2piMS1kb3QuY2lwaGVyZG5zLmNvLnph`
+* **Address:** `tls://jb1-dot.cipherdns.co.za`
 
 ### 2. DNS-over-HTTPS (DoH)
 * **Address:** `https://jb1-doh.cipherdns.co.za/dns-query`
 * **Stamp:** `sdns://AgcAAAAAAAAAETEwMi4yMTQuMTAuODI6NDQzIOqZ_CHx5qkQnPKeJ6CeLnsGIXkvpnnuhnILI-WmYCw3F2piMS1kb2guY2lwaGVyZG5zLmNvLnphCi9kbnMtcXVlcnk`
 
-### 3. DNSCrypt
+### 3. DNS-over-QUIC (DoQ)
+* **Address:** `quic://jb1-doq.cipherdns.co.za`
+
+### 4. DNSCrypt
 * **Provider:** `2.dnscrypt-cert.jb1.cipherdns.co.za`
 * **Stamp:** `sdns://AQcAAAAAAAAAEjEwMi4yMTQuMTAuODI6ODQ0MyAp_ZK8Ab77yIXFI7AIeSrgjZjUJ2zG9acKC0XARJZprSMyLmRuc2NyeXB0LWNlcnQuamIxLmNpcGhlcmRucy5jby56YQ`
 
-### 4. Anonymized DNS (Relay)
+### 5. Anonymized DNS (Relay)
 * **Stamp:** `sdns://gRIxMDIuMjE0LjEwLjgyOjg0NDM`
+
+## ⚙️ Connection Endpoints & DNS Stamps ( CapeTown-01 )
+
+### 1. DNS-over-TLS (DoT)
+* **Address:** `tls://ct1-doh.cipherdns.co.za`
+
+### 2. DNS-over-HTTPS (DoH)
+* **Address:** `https://ct1-doh.cipherdns.co.za/dns-query`
+* **Stamp:** `sdns://AgcAAAAAAAAADjEwMi4yMDkuMjEuMTc2IN9Gmj6Z-sGI6kgHGCuJ-2IbQ7MV1jsrEVngkymImwm7G2N0MS1kb2guY2lwaGVyZG5zLmNvLnphOjQ0MwovZG5zLXF1ZXJ5`
+
+### 3. DNS-over-QUIC (DoQ)
+* **Address:** `quic://ct1-doq.cipherdns.co.za`
+
+### 4. DNSCrypt
+* **Provider:** `2.dnscrypt-cert.ct1.cipherdns.co.za`
+* **Stamp:** `sdns://AQcAAAAAAAAAEzEwMi4yMDkuMjEuMTc2Ojg0NDMgXnTgm6IgQnhUO3h_6tAlE0lQ5dXjfG2JmvSXCde6P6QjMi5kbnNjcnlwdC1jZXJ0LmN0MS5jaXBoZXJkbnMuY28uemE`
+
+### 5. Anonymized DNS (Relay)
+* **Stamp:** `sdns://gRMxMDIuMjA5LjIxLjE3Njo4NDQz`
